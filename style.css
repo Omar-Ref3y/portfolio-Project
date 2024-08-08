@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+  outline: none;
+}
+img {
+  width: 100%;
+  display: flex;
+}
+
+body {
+  background-color: black;
+  font-family: "poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+nav .Logo {
+  max-width: 100px;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.li_link a {
+  position: relative;
+  padding-bottom: 1rem;
+  color: #fff;
+}
+
+.li_link a::after {
+  content: "";
+  position: absolute;
+  height: 0.2rem;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background-color: green;
+  transition: all 0.4s ease;
+}
+
+.li_link a:hover::after {
+  width: 80%;
+}
+
+.btn {
+  font-weight: 600;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: green;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.btn:hover {
+  background-color: rgb(1, 94, 1);
+}
+.Hd {
+  max-width: 1200px;
+  margin: auto;
+  padding: 5rem 2rem;
+}
+.blur {
+  position: absolute;
+  box-shadow: 0 0 1000px 100px green;
+  z-index: -100;
+}
+
+header {
+  position: relative;
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+header .content h4 {
+  color: #bdd4c3;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+header .content h1{
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 4rem;
+}
+header .content h1 .sp {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px;
+}
+.animate {
+    font-family: monospace;
+    border-right: .15em solid black;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.animate .text {
+    display: inline-block;
+}
+
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+header .content p {
+  color: #bdd4c3;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.image {
+  position: relative;
+}
+header .image::before {
+  content: "O";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 34rem;
+  font-weight: 500;
+  line-height: 20rem;
+  color: green;
+  z-index: -100;
+  opacity: 30%;
+}
+
+header .image img {
+  max-width: 600px;
+  margin: auto;
+}
+
+section .header {
+  color: #fff;
+  display: flex;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin: auto;
+}
+section {
+  margin-top: 10rem;
+}
+
+.features {
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: auto;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+.features .card {
+  background-color: #acaaaa59;
+  border: 2px solid transparent;
+  border-radius: 1rem;
+  padding: 1rem;
+  transition: all 0.4s ease;
+}
+
+.features .card:hover,
+.features .card span:hover {
+  background-color: #ffffff59;
+  border-color: #fff;
+  color: #bdd4c3;
+}
+
+.features .card span {
+  display: inline-block;
+  background-color: green;
+  padding: 0.5rem 0.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+
+.features .card h4 {
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.features .card p {
+  font-size: 1rem;
+}
+.features .card a {
+  color: #fff;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+.features .card a:hover {
+  color: green;
+}
+section .subheader {
+  color: #bdd4c3;
+  text-align: center;
+  width: 500px;
+  margin: auto;
+}
+.pricing {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+.pricing .card {
+  padding: 3rem 2rem;
+  background-color: #acaaaa59;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+}
+.pricing .card:hover {
+  border-color: #fff;
+  color: #bdd4c3;
+  background-color: #ffffff59;
+}
+.pricing .card .content {
+  flex: 1;
+  margin-bottom: 2rem;
+}
+.pricing .card .content h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.pricing .card .content h5 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px dashed #fff;
+}
+.pricing .card p {
+  color: #fff;
+}
+
+.pricing .card p i {
+  margin-right: 0.3rem;
+  font-size: 1.3rem;
+}
+.pricing .card button {
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+.pricing .card button:hover {
+  background-color: green;
+  border-color: rgb(48, 95, 1);
+}
+
+footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 400px repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+footer .column .logo {
+  max-width: 100px;
+  margin-bottom: 2rem;
+}
+footer .column p {
+  color: #bdd4c3;
+  margin-bottom: 2rem;
+}
+footer .column .social {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+footer .column .social a {
+  color: #fff;
+  font-size: 2rem;
+  transition: all 0.4s ease;
+}
+footer .column .social a:hover {
+  color: green;
+}
+footer .column h4 {
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+footer .column > a {
+  display: block;
+  color: #bdd4c3;
+  margin-bottom: 1rem;
+  transition: all 0.4s ease;
+}
+
+footer .column > a:hover {
+  color: green;
+}
+
+@media (width<1000px) {
+  .links {
+    display: none;
+  }
+  header {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  header .image {
+    grid-area: 1/1/2/2;
+  }
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pricing {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  footer {
+    grid-template-columns: 1fr 200px;
+  }
+}
+@media (width<600px) {
+  .links {
+    display: none;
+  }
+  header {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  header .image {
+    grid-area: 1/1/2/2;
+  }
+  .features {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .pricing {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  footer {
+    grid-template-columns: 1fr 150px;
+  }
+}
